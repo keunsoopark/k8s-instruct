@@ -12,6 +12,7 @@
 ### In order for the new deployement to be accessible without using the proxy, a Service is required.
 
 \# All k8s APIs are hosted through the proxy, which means `kubectl version` is identical with  
+(curl: to send url requests in command line.)  
 `curl http://localhost:8001/version`
 
 \# Store pod names as environmental variable.  
