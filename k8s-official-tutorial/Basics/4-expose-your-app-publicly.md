@@ -6,7 +6,7 @@
 `kubectl get services`
 
 \# Create new service (with `NodePort` as an option) and expose it to external traffic.  
-\# `kubernetes-bootcamp` is the name of new service.  
+`kubernetes-bootcamp` is the name of new service.  
 `kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080`
 
 \# To check what port is opened externally  
