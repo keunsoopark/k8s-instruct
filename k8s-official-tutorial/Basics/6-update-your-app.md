@@ -1,6 +1,6 @@
 ## Performing a rolling update
 
-1. Update the version of the app  
+### Update the version of the app  
 
 \# List your deployments  
 `kubectl get deployments`
@@ -18,7 +18,7 @@ Check the version of image (v1) in Containers>kubernetes-bootcamp>Image
 \# You can check the old Pods are terminated and new ones are started incrementally by AGE column.  
 `kubectl get pods`
 
-2. Verify an update  
+### Verify an update  
 
 \# Check the exposed IP address and port  
 `kubectl describe services/kubernetes-bootcamp`
@@ -36,7 +36,7 @@ Check the version of image (v1) in Containers>kubernetes-bootcamp>Image
 \# To view the current version of app  
 `kubectl describe pods`
 
-3. Rollback and update
+### Rollback and update
 
 \# Deploy v10 image  
 `kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10`

@@ -1,5 +1,7 @@
 ## Running Multiple Instances of Your App
 
+### Scaling a deployment
+
 \# List your deployments  
 `kubectl get deployments`
 - READY = CURRENT / DESIRED  
@@ -15,6 +17,8 @@
 \# To check the status of new Pods  
 `kubectl get pods -o wide`
 
+### Load balancing
+
 \# To check the changes in the event log  
 `kubectl describe deployments/kubernetes-bootcamp`
 
@@ -25,6 +29,8 @@
 `export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')`  
 `echo NODE_PORT=$NODE_PORT`  
 `curl $(minikube ip):$NODE_PORT`
+
+### Scale down
 
 \# Scale down to 2 replicas  
 `kubectl scale deployments/kubernetes-bootcamp --replicas=2`

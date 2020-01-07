@@ -1,10 +1,14 @@
 ## Vewing pods and nodes
 
+### Check application configurations
+
 \# To look the existing pods  
 `kubectl get pods`
 
 \# To view all information about pods, including what containers are inside, storage, network etc.  
 `kubectl describe pods`
+
+### Show the app in the terminal
 
 (Use proxy to debug Pods since they are running in an isolated, private network.)  
 
@@ -14,10 +18,14 @@
 \# To see the output of the application (The url is the route to the API of the Pod).  
 `curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/`  
 
+### View the container logs
+
  \# To see logs on application (container), which is stored in `STDOUT`  
 `kubectl logs $POD_NAME`
 
 We can use `excu` command to execute a command on a container in a pod.
+
+### Executing command on the container
 
 \# To list the environmental variables in a pod  
 `kubectl exec $POD_NAME env`

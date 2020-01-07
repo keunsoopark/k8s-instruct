@@ -1,5 +1,7 @@
 ## Use a service to expose your app
 
+### Create a new service
+
 \# List Services from the cluster  
 `kubectl get services`
 
@@ -16,6 +18,8 @@
 
 \# To check if the app is externally exposed.
 `curl $(minikube ip):$NODE_PORT`
+
+### Using labels
 
 \# To see the name of label for the Pod.  
 (label has been automatically assigned by Deployment.)  
@@ -34,6 +38,8 @@
 
 \# Apply new label to the Pod (with pinning the application version to the Pod.)  
 `kubectl label pod $POD_NAME app=v1`
+
+### Deleting a service
 
 \# To check the changes for new label  
 `kubectl describe pods $POD_NAME`

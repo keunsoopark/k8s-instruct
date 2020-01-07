@@ -1,4 +1,6 @@
-## Using minikube to create a cluster
+## Using minikube to create a cluster  
+
+### Cluster up and running
 
 `minikube version`  
 
@@ -6,8 +8,12 @@
 \# Minikube starts a VM, and k8s cluster runs on that VM.  
 `minikube start`  
 
+### Cluster version
+
 \# Check kubectl  
 `kubectl version`  
+
+### Cluster details
 
 \# Check cluster status - master: It provides URL for cluster monitoring UI.  
 `kubectl cluster-info`  
