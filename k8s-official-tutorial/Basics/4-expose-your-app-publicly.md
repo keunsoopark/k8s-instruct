@@ -22,7 +22,7 @@
 ### Using labels
 
 \# To see the name of label for the Pod.  
-(label has been automatically assigned by Deployment.)  
+(Label has been automatically assigned by Deployment.)  
 `kubectl describe deployment`
 
 \# To query the list of Pods using the label  
